@@ -16,6 +16,7 @@
       <div class="dropdown-toggle">{% icon name="arrow-up" %}</div>
       <ul>
         {% if translation %}
+        {% comment %} {% if translation %}
           <li>
             <form method="POST">
               <input type="hidden" name="localize-restart-translation">
@@ -23,6 +24,7 @@
             </form>
           </li>
         {% endif %}
+        {% endif %} {% endcomment %}
         <li><a href="{{ view.delete_url }}" class="shortcut">{% trans "Delete" %}</a></li>
       </ul>
     {% endif %}
