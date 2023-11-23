@@ -15,7 +15,6 @@
     {% if user_can_delete %}
       <div class="dropdown-toggle">{% icon name="arrow-up" %}</div>
       <ul>
-        {% if translation %}
         {% comment %} {% if translation %}
           <li>
             <form method="POST">
@@ -23,7 +22,6 @@
               <button class="button">{% trans "Start Synced translation" %}</button>
             </form>
           </li>
-        {% endif %}
         {% endif %} {% endcomment %}
         <li><a href="{{ view.delete_url }}" class="shortcut">{% trans "Delete" %}</a></li>
       </ul>
