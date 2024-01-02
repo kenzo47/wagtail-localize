@@ -128,6 +128,25 @@ WAGTAILLOCALIZE_MACHINE_TRANSLATOR = {
 }
 ```
 
+## LibreTranslate
+
+Website: [https://libretranslate.com/](https://libretranslate.com/)
+
+!!! note
+
+    You will need a subscription to get an API key. Alternatively, you can host your own instance. See more details at [https://github.com/LibreTranslate/LibreTranslate](https://github.com/LibreTranslate/LibreTranslate).
+
+```python
+WAGTAILLOCALIZE_MACHINE_TRANSLATOR = {
+    "CLASS": "wagtail_localize.machine_translators.libretranslate.LibreTranslator",
+    "OPTIONS": {
+        "LIBRETRANSLATE_URL": "https://libretranslate.org",  # or your self-hosted instance URL
+        # For self-hosted instances without API key setup, use a random string as the API key.
+        "API_KEY": "<Your LibreTranslate api key here>",
+    },
+}
+```
+
 ## Dummy
 
 The dummy translator exists primarily for testing Wagtail Localize and it only reverses the strings that are passed to
@@ -152,7 +171,7 @@ class CustomTranslator(BaseMachineTranslator):
     def translate(self, source_locale, target_locale, strings):
         # Translate something
         # source_locale and target_locale are both Locale objects.
-        # strings are a list of StringValue instances (see https://www.wagtail-localize.org/ref/strings/#wagtail_localize.strings.StringValue)
+        # strings are a list of StringValue instances (see https://wagtail-localize.org/latest/ref/strings/#wagtail_localize.strings.StringValue)
 
         # This function must return a dict with source StringValue's as the keys and translations as the values.
 

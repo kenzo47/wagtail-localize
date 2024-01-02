@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.8beta1] - 2023-12-21
+
+### Added
+
+- [LibreTranslate](https://libretranslate.com/) machine translator support ([#753](https://github.com/wagtail/wagtail-localize/pull/753)) @drivard
+- Official support for Django 5.0 (when using Wagtail 5.2.2+) ([#755](https://github.com/wagtail/wagtail-localize/pull/755) and [#747](https://github.com/wagtail/wagtail-localize/pull/747)) @ACK1D and @softquantum
+
+### Changed
+
+- Replace usages of assertFormError which is removed in Django 5 ([#754](https://github.com/wagtail/wagtail-localize/pull/754) @softquantum
+- Switched to using Read The Docs for documentation
+
+## [1.7] - 2023-11-15
+
+### Added
+
+- Provisional support for Wagtail 6 ([#742](<(https://github.com/wagtail/wagtail-localize/pull/742)>) @zerolab
+
+### Changed
+
+- Updated target language code for [DeepL](https://www.deepl.com/en/docs-api/translate-text/translate-text) ([#739](https://github.com/wagtail/wagtail-localize/pull/739)) @unreadableusername
+
 ## [1.7rc1] - 2023-11-07
 
 ### Added
@@ -68,7 +90,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Improve authentication options for GoogleCloudTranslator (https://github.com/wagtail/wagtail-localize/pull/645) @ababic
-  See https://www.wagtail-localize.org/how-to/integrations/machine-translation/ for further details.
+  See https://wagtail-localize.org/how-to/integrations/machine-translation/ for further details.
 - Add setting to skip publication when live pages are submitted for translation (https://github.com/wagtail/wagtail-localize/pull/656) @mattlinares
   The setting is `WAGTAILLOCALIZE_SYNC_LIVE_STATUS_ON_TRANSLATE`, defaulting to `True`.
 
@@ -267,7 +289,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [Make sure field level validation runs when translating snippets](https://github.com/wagtail/wagtail-localize/pull/427)
 
-[unreleased]: https://github.com/wagtail/wagtail-localize/compare/v1.7rc1...HEAD
+[unreleased]: https://github.com/wagtail/wagtail-localize/compare/v1.7...HEAD
+[1.8beta1]: https://github.com/wagtail/wagtail-localize/compare/v1.7...v1.8-beta.1
+[1.7]: https://github.com/wagtail/wagtail-localize/compare/v1.7rc1...v1.7
 [1.7rc1]: https://github.com/wagtail/wagtail-localize/compare/v1.6...v1.7rc1
 [1.6]: https://github.com/wagtail/wagtail-localize/compare/v1.5.2...v1.6
 [1.5.2]: https://github.com/wagtail/wagtail-localize/compare/v1.5.1...v1.5.2
